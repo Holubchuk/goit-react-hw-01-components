@@ -1,45 +1,38 @@
 import React from 'react';
+import css from './Profile.module.css';
+import cn from 'classnames';
 
-export const Profile = ({ username, tag, location, avatar, stats  }) => {
+export const Profile = ({
+  username,
+  tag,
+  location,
+  avatar,
+  stats: { followers, likes, views },
+  className = ''
+}) => {
   return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src={avatar}
-          alt="User avatar"
-          class="avatar"
-        />
-        <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
-        <p class="location">{location}</p>
+    <div className= {cn(css.profile)}>
+      <div className= {cn(css.description)}>
+        <img src={avatar} alt="User avatar" className= {cn(css.avatar)} />
+        <p className= {cn(css.name)}>{username}</p>
+        <p className= {cn(css.tag)}>@{tag}</p>
+        <p className= {cn(css.location)}>{location}</p>
       </div>
 
-      <ul class="stats">
-        <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+      <ul className= {cn(css.stats)}>
+        <li className= {cn(css.statsItem)}>
+          <span className= {cn(css.label)}>Followers</span>
+          <span className= {cn(css.quantity)}>{followers}</span>
         </li>
-        <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
+        <li className= {cn(css.statsItem)}>
+          <span className= {cn(css.label)}>Views</span>
+          <span className= {cn(css.quantity)}>{views}</span>
         </li>
-        <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+        <li className= {cn(css.statsItem)}>
+          <span className= {cn(css.label)}>Likes</span>
+          <span className= {cn(css.quantity)}>{likes}</span>
         </li>
       </ul>
     </div>
   );
 };
-
-export const user = {
-  "username": "Jacques Gluke",
-  "tag": "jgluke",
-  "location": "Ocho Rios, Jamaica",
-  "avatar": "https://cdn-icons-png.flaticon.com/512/2922/2922506.png",
-  "stats": {
-    "followers": 5603,
-    "views": 4827,
-    "likes": 1308
-  }
-}

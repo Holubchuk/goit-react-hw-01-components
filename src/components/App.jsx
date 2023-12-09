@@ -1,7 +1,7 @@
-import { user } from '../user';
-import { data } from '../user';
+import { user, data, friends } from '../user';
 import { Profile } from './Profile/Profile';
 import { Statistics } from './Statistics/Statistics';
+import { FriendList } from './FriendList/FriendList';
 
 export const App = () => {
   return (
@@ -17,6 +17,8 @@ export const App = () => {
       />
       <h2 style={{ textAlign: 'center' }}>TASK 2</h2>
       <Statistics title="Upload stats" stats={data} />
+      <h2 style={{ textAlign: 'center' }}>TASK 3</h2>
+      <FriendList friends={friends} />;
     </div>
   );
 };

@@ -1,4 +1,4 @@
-export const user = {
+export const user ={
     "username": "Jacques Gluke",
     "tag": "jgluke",
     "location": "Ocho Rios, Jamaica",
@@ -9,7 +9,7 @@ export const user = {
       "likes": 1308
     }
   }
-
+  
   export const data = [
     { "id": "id-1", "label": ".docx", "percentage": 22 },
     { "id": "id-2", "label": ".pdf", "percentage": 4 },

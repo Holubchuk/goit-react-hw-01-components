@@ -2,14 +2,14 @@ import React from 'react';
 import cn from 'classnames';
 import css from './FriendList.module.css';
 
-export const FriendList = ({friends}) => {
+export const FriendList = ({ friends }) => {
   return (
     <section className={cn(css.friend)}>
       <ul className={cn(css.friendList)}>
         {Array.isArray(friends) &&
           friends.map(({ avatar, name, isOnline, id }) => (
             <li className={cn(css.item)} key={id}>
-              <span className={cn(css.status)}>{isOnline}</span>
+              <span className={cn( isOnline ? css.online : css.offline)}>{isOnline}</span>
               <img
                 className={cn(css.avatar)}
                 src={avatar}

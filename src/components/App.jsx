@@ -5,7 +5,7 @@ import { FriendList } from './FriendList/FriendList';
 
 export const App = () => {
   return (
-    <div style={{ backgroundColor: 'azure' }}>
+    <div style={{ backgroundColor: '#eef2ef' }}>
       <h2 style={{ textAlign: 'center' }}>TASK 1</h2>
       <Profile
         username={user.username}

@@ -6,7 +6,7 @@
     align-items: center;
     width: 400px;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .description {
     background-color: ivory;
@@ -16,9 +16,8 @@
 }
 .stats {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 40px;
     background-color: rgb(189, 202, 214);
     border: 2px solid rgb(63, 62, 62);
     border-top: none;
@@ -49,13 +48,17 @@
     text-align: center; 
     color: rgb(119, 128, 128);
 }
-.statsItem {
+.statsItem, .statsItemViews {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    ;
+}
+.statsItemViews {
+    border-left: 2px solid rgb(119, 128, 128);
+    border-right: 2px solid rgb(119, 128, 128);
+    padding: 0 30px;
 }
 .label {
      font-size: 24px;

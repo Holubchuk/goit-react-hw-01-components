@@ -8,29 +8,28 @@ export const Profile = ({
   location,
   avatar,
   stats: { followers, likes, views },
-  className = ''
 }) => {
   return (
-    <div className= {cn(css.profile)}>
-      <div className= {cn(css.description)}>
-        <img src={avatar} alt="User avatar" className= {cn(css.avatar)} />
-        <p className= {cn(css.name)}>{username}</p>
-        <p className= {cn(css.tag)}>@{tag}</p>
-        <p className= {cn(css.location)}>{location}</p>
+    <div className={cn(css.profile)}>
+      <div className={cn(css.description)}>
+        <img src={avatar} alt="User avatar" className={cn(css.avatar)} />
+        <p className={cn(css.name)}>{username}</p>
+        <p className={cn(css.tag)}>@{tag}</p>
+        <p className={cn(css.location)}>{location}</p>
       </div>
 
-      <ul className= {cn(css.stats)}>
-        <li className= {cn(css.statsItem)}>
-          <span className= {cn(css.label)}>Followers</span>
-          <span className= {cn(css.quantity)}>{followers}</span>
+      <ul className={cn(css.stats)}>
+        <li className={cn(css.statsItem)}>
+          <span className={cn(css.label)}>Followers</span>
+          <span className={cn(css.quantity)}>{followers}</span>
         </li>
-        <li className= {cn(css.statsItem)}>
-          <span className= {cn(css.label)}>Views</span>
-          <span className= {cn(css.quantity)}>{views}</span>
+        <li className={cn(css.statsItemViews)}>
+          <span className={cn(css.label)}>Views</span>
+          <span className={cn(css.quantity)}>{views}</span>
         </li>
-        <li className= {cn(css.statsItem)}>
-          <span className= {cn(css.label)}>Likes</span>
-          <span className= {cn(css.quantity)}>{likes}</span>
+        <li className={cn(css.statsItem)}>
+          <span className={cn(css.label)}>Likes</span>
+          <span className={cn(css.quantity)}>{likes}</span>
         </li>
       </ul>
     </div>

@@ -9,7 +9,7 @@ export const FriendList = ({ friends }) => {
         {Array.isArray(friends) &&
           friends.map(({ avatar, name, isOnline, id }) => (
             <li className={cn(css.item)} key={id}>
-              <span className={cn( isOnline ? css.online : css.offline)}>{isOnline}</span>
+              <span className={cn(isOnline ? css.online : css.offline)}></span>
               <img
                 className={cn(css.avatar)}
                 src={avatar}

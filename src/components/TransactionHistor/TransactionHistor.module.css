@@ -1,0 +1,36 @@
+.transactionsSection {
+  margin: 20px auto;
+  width: 800px;
+  background-color: grey;
+}
+
+.transactionsTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+}
+
+.transactionsHead {
+  background-color: #f2f2f2;
+}
+
+.transactionsHeadItem,
+.transactionsBodyItem,
+.transactionsBodyItemAmount,
+.transactionsHeadItemAmount
+ {
+  padding: 10px;
+  text-align: center;
+}
+
+.transactionsBodyList:hover,
+.transactionsBodyList:hover:nth-child(2n) {
+  background-color: green;
+}
+.transactionsBodyList:nth-child(2n) {
+  background-color: #f2f2f2;
+}
+.transactionsBodyItemAmount, .transactionsHeadItemAmount {
+    border-left: 2px solid #ddd;
+    border-right: 2px solid #ddd;
+}

@@ -1,6 +1,6 @@
-import React from 'react';
 import cn from 'classnames';
 import css from './FriendList.module.css';
+import {FriendListItem} from '../FriendsListItem/FriendListItem';
 
 export const FriendList = ({ friends }) => {
   return (
@@ -8,16 +8,7 @@ export const FriendList = ({ friends }) => {
       <ul className={cn(css.friendList)}>
         {Array.isArray(friends) &&
           friends.map(({ avatar, name, isOnline, id }) => (
-            <li className={cn(css.item)} key={id}>
-              <span className={cn(isOnline ? css.online : css.offline)}></span>
-              <img
-                className={cn(css.avatar)}
-                src={avatar}
-                alt="User avatar"
-                width="48"
-              />
-              <p className={cn(css.name)}>{name}</p>
-            </li>
+            <FriendListItem avatar={avatar} name={name} isOnline={isOnline} key={id} />
           ))}
       </ul>
     </section>

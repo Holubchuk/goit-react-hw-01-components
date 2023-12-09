@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import css from './TransactionHistor.module.css';
+import css from './TransactionHistory.module.css';
 
 export const Transactions = ({ items }) => {
   return (
